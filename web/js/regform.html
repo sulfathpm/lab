@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 20px;
+        }
+        table{
+            width: 50%;
+            text-align: justify;
+            margin: auto;
+        }
+        td{
+            padding: 10px;
+            border: 1px solid;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Registration form</h2>
+    
+    <form onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>username : </td>
+                <td>
+                    <input type="text" name="uname" id="uname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>password : </td>
+                <td>
+                    <input type="password" name="pw" id="pw" required>
+                </td>
+            </tr>
+            <tr>
+                <td>phone : </td>
+                <td>
+                    <input type="text" name="phone" id="phone" required>
+                </td>
+            </tr>
+            <tr>
+                <td> email : </td>
+                <td>
+                    <input type="text" name="email" id="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <!-- <button type="reset">Reset</button> -->
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function validateForm(event) {
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+
+            if (!/^\d{10}$/.test(phone)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            alert('Form submitted successfully!');
+            return true;
+        }
+    </script>
+</body>
+</html>

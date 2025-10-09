@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>reg form</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration form</h2>
+    <form id="regForm">
+        <table>
+            <tr>
+                <td>username :</td>
+                <td><input type="text" name="uname" id="uname" /></td>
+            </tr>
+            <tr>
+                <td>password :</td>
+                <td><input type="password" name="pw" id="pw" /></td>
+            </tr>
+            <tr>
+                <td>phone :</td>
+                <td><input type="text" name="phone" id="phone" /></td>
+            </tr>
+            <tr>
+                <td>email :</td>
+                <td><input type="text" name="email" id="email" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        document.getElementById('regForm').onsubmit = function(event) {
+            event.preventDefault(); // prevent form from submitting immediately
+
+            const uname = document.getElementById('uname').value.trim();
+            const pw = document.getElementById('pw').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            // Basic checks
+            if (!uname) {
+                alert('Please enter your username.');
+                return false;
+            }
+            if (!pw) {
+                alert('Please enter your password.');
+                return false;
+            }
+
+            // Optional: check phone is numeric and length, if you want
+            if (phone && !/^\d{10}$/.test(phone)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+
+            // Email validation regex
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // If all validations pass
+            alert('Form submitted successfully!');
+            // Here you can submit the form or do AJAX call etc.
+            // For example, to submit:
+            // this.submit();
+
+            return true;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg form</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: justify;
+        }
+        h2{
+            text-align: center;
+        }
+        table{
+            text-align: justify;
+            margin: 1px solid;
+            margin: auto;
+        }
+        td{
+            text-align: justify;
+            border: 1px solid;
+            padding: 10px;
+
+        }
+        .sec-title{
+            text-align: center;
+            font-weight: bold;
+
+        }
+        .btn{
+            text-align: center;
+            ;
+        }
+        button{
+            background-color: rgb(46, 72, 216);
+            padding: 5px;
+            width: 77px;
+            height: 27px
+        }
+        button:hover{
+            background-color: rgb(75, 86, 240);
+        }
+    </style>
+    <h2>
+        Reg form for admission
+    </h2>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="2" class="sec-title">Personal Information</td>
+            </tr>
+             <tr>
+            <td>
+            Name : </td><td>
+            <input type="text" name="uname" required> </td></tr>
+            <tr>
+            <td>
+             Address : </td><td>
+                
+                <textarea name="address" id="">
+
+                </textarea>
+            </td></tr>
+            <tr>
+                <td>
+                    Phone Number : </td><td>
+
+                   <input type="number" value="phn">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Gender :  </td><td>
+                    Male <input type="radio" value="female" name="gendr">
+                    Female <input type="radio" value="male" name="gendr">
+                    Others <input type="radio" value="other" name="gendr">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of birth :  </td><td>
+                    <input type="date" name="dob">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Guardian :  </td><td>
+                    <input type="text" name="guardian">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  Courses   </td>
+                
+                 
+                  <td>
+                    BA <input type="checkbox" name="course" value="ba">
+                    B.Sc <input type="checkbox" name="course" value="bsc">
+                    BCA <input type="checkbox" name="course" value="bca">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                        Hobbies </td> <td>
+                        Reading <input type="checkbox" name="hobby" value="read">
+                        sports <input type="checkbox" name="hobby" value="sport">
+                        Drawing <input type="checkbox" name="hobby" value="draw">
+                        Singing <input type="checkbox" name="hobby" value="sing">
+
+                       
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Extra Curricular Activities :   
+                </td> <td> <textarea name="activity"  id=""></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="sec-title">
+                    For Office use only
+                </td>
+            </tr>
+            <tr>
+               <td>
+                Admission Number :  </td> <td>
+                <input type="text" name="admno"></td>
+            </tr>
+            <tr>
+               <td>
+                Admission Date :  </td> <td>
+                <input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td >
+
+                    Remarks :  </td> <td>
+                    <textarea name="remrk" id=""></textarea>
+                </td>
+            </tr>
+            <tr class="btn">
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+                 <td>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <style>
+        table{
+            margin:auto;
+            border: solid 1px;
+            width: 80%;
+        }
+        td{
+            border: solid 1px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Registration Form</h2>
+    <form onsubmit="return validateForm()">
+    <table>
+         <tr>
+                <td class="sec-title" colspan="2">
+                    Personal Information
+                </td>
+            </tr>
+            <tr>
+            <td>
+            Name : </td><td><input type="text" name="uname" required> </td></tr>
+             <tr>
+                <td>password : </td>
+                <td>
+                    <input type="password" name="pw" id="pw" required>
+                </td>
+            </tr>
+            <tr>
+            <td>
+             Address :</td><td><textarea name="address" id="" required>
+
+                </textarea>
+            </td></tr>
+            <tr>
+                <td>
+                    Phone Number : </td><td><input type="number" id="phone" value="phone" required>
+                </td>
+            </tr>
+            <tr>
+                <td> email : </td>
+                <td>
+                    <input type="email" name="email" id="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender :
+                    </td><td> 
+                    Male <input type="radio" value="male" name="gendr">
+                    Female <input type="radio" value="female" name="gendr">
+                    Others <input type="radio" value="other" name="gendr">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+    </table>
+    </form>
+    <script>
+        function validateForm(){
+            const phone=document.getElementById('phone').value;
+            const email=document.getElementById('email').value;
+            const pw=document.getElementById('pw').value;
+            if(pw.length<6){
+                alert('password should be atleast 6 characters');
+                return false;
+            }
+            if(!/^d{10}$/.test(phone)){
+                alert('please enter a valid 10-digit phone number');
+                return false;
+            }
+            const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailPattern.test(email)){
+                alert('please enter a valid email address.');
+                return false;
+            }
+            alert('form submitted successfully');
+            return true;
+        }
+    </script>
+</body>
+</html>

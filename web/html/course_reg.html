@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course reg form</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            margin: 20px;
+        }
+        table{
+            width: 50%;
+            text-align: justify;
+            margin: auto;
+        }
+        td{
+            text-align: justify;
+            padding: 10px;
+            border: 1px solid; 
+        }
+        .sec-title{
+            background-color: rgb(206, 113, 201);
+            font-weight: bold;
+        }
+    </style>
+    <form action="">
+        <h2>Course Registration Form</h2>
+        <table>
+            <tr>
+                <td class="sec-title">
+                    Personal Information
+                </td>
+            </tr>
+            <tr>
+            <td>
+            Name : <input type="text" name="uname"> </td></tr>
+            <tr>
+            <td>
+             Address : <textarea name="address" id="">
+
+                </textarea>
+            </td></tr>
+            <tr>
+                <td>
+                    Phone Number : <input type="number" value="phn">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Gender : 
+                    Male <input type="radio" value="female" name="gendr">
+                    Female <input type="radio" value="male" name="gendr">
+                    Others <input type="radio" value="other" name="gendr">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of birth : 
+                    <input type="text" name="dob">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Guardian : <input type="text" name="guardian">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  Courses  </td>
+                  </tr><tr>
+                  <td>
+                    BA <input type="checkbox" name="course" value="ba">
+                    B.Sc <input type="checkbox" name="course" value="bsc">
+                    BCA <input type="checkbox" name="course" value="bca">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                        Hobbies </td> </tr><tr> <td>
+                        Reading <input type="checkbox" name="hobby" value="read">
+                        sports <input type="checkbox" name="hobby" value="sport">
+                        Drawing <input type="checkbox" name="hobby" value="draw">
+                        Singing <input type="checkbox" name="hobby" value="sing">
+
+                       
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Extra Curricular Activities :   <textarea name="activity"  id=""></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td  class="sec-title">
+                    For Office use only
+                </td>
+            </tr>
+            <tr>
+               <td>
+                Admission Number : 
+                <input type="text" name="admno"></td>
+            </tr>
+            <tr>
+               <td>
+                Admission Date : 
+                <input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td>
+
+                    Remarks : 
+                    <textarea name="remrk" id=""></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
